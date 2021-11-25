@@ -36,16 +36,16 @@ echo "Running docker:"
 set -ev
 
 # When we are on Github Actions
-if [[ $CI ]] 
-then
-   DOCKEROPTS="--rm"
-   DOCKERIMG=$(echo $GITHUB_REPOSITORY | tr [A-Z] [a-z])
-   TAG=latest
-else
+#if [[ $CI ]] 
+#then
+#   DOCKEROPTS="--rm"
+#   DOCKERIMG=$(echo $GITHUB_REPOSITORY | tr [A-Z] [a-z])
+#   TAG=latest
+#else
    DOCKEROPTS="-it --rm"
    source $configfile
    DOCKERIMG=$MYHUBID/$MYIMG
-fi
+#fi
 
 # ensure that the directories are writable by Docker
 chmod a+rwX code code/*
