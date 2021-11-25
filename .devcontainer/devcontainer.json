@@ -13,5 +13,5 @@
     "remoteEnv": {
         "DOCKER_BUILDKIT": "1",
     },
-    "InitializeCommand": "./init.sh",
+    "initializeCommand": "./init.sh",
 }
