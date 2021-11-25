@@ -4,7 +4,7 @@
          it does NOT fully comply with best practices
 */
 
-global BASEDIR "/" /* <--- adjust as necessary */
+global BASEDIR "/workspaces/testing" /* <--- adjust as necessary */
 
 global DATADIR "${BASEDIR}/data"
 global CODEDIR "${BASEDIR}/code"
