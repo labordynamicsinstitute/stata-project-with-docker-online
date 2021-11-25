@@ -3,6 +3,7 @@
     /* "image": "aeadataeditor/stata-project-with-docker:latest", */
     "dockerFile": "Dockerfile",
     "context": "..",
+    "initializeCommand": ".devcontainer/init.sh",
     "settings": {
         "workbench.colorTheme": "Visual Studio Light"
     },    
@@ -13,5 +14,4 @@
     "remoteEnv": {
         "DOCKER_BUILDKIT": "1",
     },
-    "initializeCommand": "./init.sh",
 }
