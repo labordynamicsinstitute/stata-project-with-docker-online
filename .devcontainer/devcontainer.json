@@ -13,5 +13,9 @@
     "workspaceFolder": "/code",
     "remoteEnv": {
         "DOCKER_BUILDKIT": "1",
-    },
+	},
+	"extensions": [
+		"kylebarron.stata-enhanced",
+		"yeaoh.statarun"
+	],
 }
