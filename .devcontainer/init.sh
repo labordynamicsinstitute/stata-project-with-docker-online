@@ -1,13 +1,13 @@
  #!/bin/bash
  if [[ ! -f stata.lic ]] 
  then
-    if [[ -z ${localEnv.STATA_LIC_BASE64} ]]
+    if [[ -z ${STATA_LIC_BASE64} ]]
     then
         echo "No license found."
         exit 2
     else
-        echo "${localEnv.STATA_LIC_BASE64}" | base64 -d > stata.lic 
+        echo "${STATA_LIC_BASE64}" | base64 -d > stata.lic 
     fi
 fi
-docker buildx install
+#docker buildx install
 echo "init done."
