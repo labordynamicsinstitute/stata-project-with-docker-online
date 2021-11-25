@@ -1,6 +1,8 @@
 {
     "name": "dev-demo",
-    "image": "aeadataeditor/stata-project-with-docker:latest",
+    /* "image": "aeadataeditor/stata-project-with-docker:latest", */
+    "dockerFile": "Dockerfile",
+    "context": "..",
     "settings": {
         "workbench.colorTheme": "Visual Studio Light"
     },    
@@ -11,5 +13,5 @@
     "remoteEnv": {
         "DOCKER_BUILDKIT": "1",
     },
-    "InitializeCommand": "[[ -f stata.lic ]] || echo \"${localEnv.STATA_LIC_BASE64}\" | base64 -d > stata.lic ",
+    "InitializeCommand": "./init.sh",
 }
