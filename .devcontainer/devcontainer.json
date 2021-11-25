@@ -1,0 +1,15 @@
+{
+    "name": "dev-demo",
+    "image": "aeadataeditor/stata-project-with-docker:latest",
+    "settings": {
+        "workbench.colorTheme": "Visual Studio Light"
+    },    
+    "mounts": ["source=${localWorkspaceFolder}/stata.lic,target=/usr/local/stata/stata.lic,type=bind",
+               "source=${localWorkspaceFolder}/data,target=/data,type=bind"],
+    "workspaceMount": "source=${localWorkspaceFolder}/code,target=/code,type=bind",
+    "workspaceFolder": "/code",
+    "remoteEnv": {
+        "DOCKER_BUILDKIT": "1",
+    },
+    "InitializeCommand": "[[ -f stata.lic ]] || echo \"${localEnv.STATA_LIC_BASE64}\" | base64 -d > stata.lic ",
+}
