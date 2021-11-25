@@ -1,7 +1,7 @@
- #!/bin/bash
- if [[ ! -f stata.lic ]] 
+ #!/bin/sh
+ if [ ! -f stata.lic ]
  then
-    if [[ -z ${STATA_LIC_BASE64} ]]
+    if [ -z ${STATA_LIC_BASE64} ]
     then
         echo "No license found."
         exit 2
