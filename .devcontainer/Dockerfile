@@ -17,8 +17,8 @@ WORKDIR /home/statauser
 RUN /usr/local/stata/stata do /setup.do | tee setup.$(date +%F).log
 
 #  then delete the license again
-USER root
-RUN rm /usr/local/stata/stata.lic
+#USER root
+#RUN rm /usr/local/stata/stata.lic
 
 # Setup for standard operation
 USER statauser
