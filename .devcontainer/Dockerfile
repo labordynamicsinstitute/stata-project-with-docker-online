@@ -7,9 +7,8 @@ FROM ${SRCHUBID}/stata${SRCVERSION}:${SRCTAG}
 
 # copy the license in so we can do the install of packages
 USER root
-RUN --mount=type=secret,id=statalic \
-    cp /run/secrets/statalic /usr/local/stata/stata.lic \
-    && chmod a+r /usr/local/stata/stata.lic
+COPY stata.lic /usr/local/stata/stata.lic
+RUN chmod a+r /usr/local/stata/stata.lic
 
 # install any packages into the home directory as the user,
 USER statauser
