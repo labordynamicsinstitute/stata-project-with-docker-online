@@ -155,6 +155,14 @@ source config.txt
 docker push $MYHUBID/${MYIMG}:$TAG
 ```
 
+To do this within your Github Actions (see `.github/workflows/build.yml`), you need to provide login credentials securely to your Github workflow (you only need to do this once for all of your repositories)
+
+```
+source config.txt
+gh secret set DOCKERHUB_USERNAME -b$MYHUBID -o labordynamicsinstitute -v all
+gh secret set DOCKERHUB_TOKEN -b$TOKEN      -o labordynamicsinstitute -v all
+```
+
 ### Sync your Git repository
 
 We assume you created a Git repository. If not, do it now! Assuming you have committed all files (in particular, `config.txt`, `run.sh`, and all your Stata code), you should push it to your Github repository:
